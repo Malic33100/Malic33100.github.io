@@ -1,0 +1,309 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+/* focus and outline style */
+:focus {
+    outline: 5px;
+    outline-color: blue;
+}
+
+* {
+    box-sizing: border-box ;
+}
+
+html {
+    overflow-y:auto;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    height: 100%;
+    width:100%;
+}
+
+a {
+    color: #fff;
+}
+
+@media (max-width: 750px){
+    .panel-points {
+        display: none;
+    }
+
+#about-text {
+     content:"Software engineer"
+   }
+}
+/* body styles */
+body {
+    font-family: "Montserrat" , sans-serif;
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+    height: 100vh;
+    margin-top: 0;
+    position:relative;
+    background-color:#000;
+};
+
+
+h2 {
+    font-family: "Montserrat", sans-serif;
+    display:flex;
+    align-content:center;
+    align-items: center;
+    color:#fff;
+}
+
+/* icon bar styles, contains img icons */
+
+#icon-bar{
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    margin: top 5%;;
+    margin-right: 3%;
+    border-radius: 10% 15% 10% 15%;
+    background: radial-gradient(180deg, #000, #fff, #000,#000, #fff, #000,#000, #fff, #000);
+    /* linear-gradient(131deg, #ff2400, #e81d1d, #e8b71d,
+     #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3); */
+    height: 10vh;
+    width:450px;
+    opacity: 80%;
+    -webkit-filter:invert(100%);  
+    filter:invert(100%);    
+}
+
+/*img styles */
+img {
+    width: 6vmax;
+    height: auto;
+    opacity: 80%;
+    border-color:#000;
+    margin-left: 50px;
+    transition: 0.5s;
+    background: #fff;
+   /* border-color:linear-gradient(256deg, #ff2400, #e81d1d, #e8b71d,
+     #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3); */
+}
+
+/* hover animation */
+img:hover {
+    max-width: 10vh;
+    height: fit-content; 
+    transition: 0.5s;
+    border-color: whitesmoke;
+    border-style: solid;
+    border-radius: 25%;
+    border: width 8vmax;
+}
+
+/* my name that appears on page */
+#myname {
+    display: grid;
+    justify-content: center;
+    text-align: left; 
+    align-self:auto;
+    margin-left: 1vw;
+    color:#fff;
+    font-size: 5em;
+    margin-top:100%;
+    position: relative;
+    background-color: #000;
+    text-decoration: underline 10%;
+    animation: 2s ease-out 0s 1 Fadein;
+}
+/* animtion that plays on page load */
+@keyframes Fadein{
+    0%{
+        opacity:0;
+    }
+    100%{
+        opacity:100%;
+    }
+}
+
+/* container for about text */
+#about-me {
+    background-color:blue;
+    display: flex;
+    align-items: center;
+}
+
+#about-sum {
+    margin:none;
+    opacity: 1;
+}
+
+/* about text that describes page, and element currently hovered */
+#about-text {
+    font-size: medium;
+    color:#fff;
+    text-align: center;
+    opacity: 0;
+    width: 100%;
+    margin-top:10px;
+    background-color: #000;
+    transition-duration: 2s;
+    transition: linear;
+    animation: 2s ease-out 0s 1 Fadein;
+}
+
+#description {
+    width:30%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+/* icon styles */
+#github-icon {
+    width:auto;
+    background-color: ghostwhite;
+}
+
+#resume-icon {
+    width:auto;
+    background-color: #fff;
+    margin:none;
+} 
+
+#linkedin-icon {
+    width:auto;
+    background-color: yellow;
+}
+
+
+#contact-page-icon {
+    height:fit-content;
+    width: auto;
+}
+
+#scroll-down {
+    display: flex;
+}
+
+/* page spanner that separates project page from home page */
+
+#page-spanner {
+    margin-bottom: 15%;
+    width:100%;
+    height:20vh;
+    background-color: #fff;
+    display:block;
+    overflow: hidden;
+}
+#panel-bar {
+    display: flex;
+}
+#return {
+    margin-bottom:10%;
+    display: flex;
+    justify-self: center;
+}
+
+#block {
+    height: 40vh;
+    display: block;
+    width:100%;
+    color:#fff;
+    margin-bottom: 25%;
+    margin-top: 20%;
+    white-space: break-spaces;
+}
+
+#test{
+    height: 20vh;
+    font-size: large;
+}
+
+#project-page-title {
+    display: grid;
+    justify-content: center;
+    text-align: left; 
+    color:#fff;
+    font-size: 5em;
+    margin-top:auto;
+    background-color: #000;
+    text-decoration: underline 10%;
+    animation: 2s ease-out 0s 1 Fadein;
+}
+
+/* panel style elements */
+
+.panel {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    background-color: #fff;
+    height:20%;
+    justify-content: space-between;
+}
+
+.panel-text {
+text-overflow: clip;
+color:blue;
+text-align: center;
+}
+
+.panel-points {
+    width:40%;
+    overflow: auto;
+    font-size: small;
+    margin:auto;
+}
+
+.panel-image {
+    width: auto;
+    height: auto;
+    opacity: 100%;
+    transition: 0.5s;
+    pointer-events: none;
+    background: #fff;
+}
+
+.panel-press {
+    /*oansod */
+    color:green
+}
+
+.panel-button {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    align-self: center;
+    justify-content: center;
+    height: 25%;
+    margin-top:5%;
+   color:blue;
+}
+
+#panel-space {
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+}
+
+#scroll-to-top {
+    position: relative;
+    display:grid;
+    margin-bottom:5%;
+    align-self: center;
+}
+
+#Top {
+    font-size: x-large;
+    height: auto;
+}
+
+/* footer */
+#footer {
+    background-color: #a9a9a9;
+    text-align: left;
+    width: 100%;
+    align-self: center;
+    height: 25vh;
+    color: #fff;
+    display: none;
+}
+
+.coming-soon {
+    visibility:none;
+}
