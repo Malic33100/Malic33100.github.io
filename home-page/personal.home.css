@@ -97,7 +97,7 @@ img:hover {
 
 /* my name that appears on page */
 #myname {
-    display: grid;
+    display: flex;
     justify-content: center;
     text-align: left; 
     align-self:auto;
@@ -202,7 +202,7 @@ img:hover {
 
 #block {
     height: 40vh;
-    display: block;
+    display: flex;
     width:100%;
     color:#fff;
     margin-bottom: 25%;
