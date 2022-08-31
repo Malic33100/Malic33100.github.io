@@ -13,25 +13,34 @@
     <div id="Inputs">
         <form id="form">
 
-        <label for="first">First Name(*)</label><input type="text" id="first" placeholder="First Name" required autofocus> 
+        <label for="first">First Name(*)</label><input type="text" id="first" placeholder="Enter first name" required autofocus> 
 
-        <label for="last">Last Name(*)</label><input type="text" id="last" placeholder="Last Name" required>
+        <label for="last">Last Name(*)</label><input type="text" id="last" placeholder="Enter last name" required>
             
         
         <label class="label" for="email">Email(*)</label>
         <input type="email" id="email" placeholder="email address" required> 
         
         <label class="label" for="telly">Cell-phone</label>
-        <input type="tel" id="telly" placeholder="(xxx-xxx-xxxx)"> 
-       
+        <input type="tel" id="telly" placeholder="xxx-xxx-xxxx"> 
+
          <div>
-            <label class="label" for="file">Attach file:</label>
-            <input type="file" id="file" placeholder="Select File">
+            <label class="label" for="subject">Select most related subject of message:</label>
+            <input type="checkbox" id="sub1" value="general" required>
+            <input type="checkbox" id="sub2" name="sub2" value="Car">
+  <label    for="sub2"> I have a car</label><br>
+  <input    <input type="checkbox" id="sub3" name="sub3" value="Boat">
+  <label    for="sub3"> I have a boat</label>
         </div>
+           
+       
+          <input type="text" class="message-box" placeholder="Brief message">  
+        
+        
             
-        <input type="text" id="message-box" size="300" height="300" placeholder="Brief message">
-            
-        <input type="submit" name="submit" id="submit" onclick="Footer()">
+        <input type="submit" id="Submit" value="Submit" class="submit" onclick="Submit()">
+
+        <input type="submit" id="Return" value="Return to Home" class="submit" onclick="ReturnHome">
 
     </form>
     </div>
