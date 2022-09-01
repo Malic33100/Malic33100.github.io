@@ -8,13 +8,9 @@ var telly = form.elements["telly"].value;
 var subject = form.elements["subject"].value;
 var message = form.elements["message-box"].value;
 const submit = getElementById("Submit");
-const returnHome = getElementById("Return");
+// const returnHome = getElementById("Return");
 
-function ReturnHome () {
-    /*navigate to this page */
 
-    href="index.html"
-}
 
 function Submit() {
     // enter form data //
