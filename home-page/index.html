@@ -12,8 +12,6 @@
 
 <!-- html dom -->
 <body id="body">
-    <a id="TopOfBody"></a>
-
 
     <!-- my name displayed in text-->
     <div class="block"></div>
@@ -53,7 +51,7 @@
     
     <!-- button to scroll down to project page, same as project button icon -->
             <input type="button" class="scroll-button" value="My projects"
-        href="#Projects">My Projects</button>
+        href="#Projects" scrollbehavior="smooth" onclick="document.getElementById('Projects').scrollIntoView();">My Projects</button>
         
              
        <div class="block"></div>
@@ -110,6 +108,22 @@
                 <h3 id="panel-points"></h3>
             </ol>
         </div>
+            <button id="live-version" class="coming-soon panel-button">Live Version</button>
+            <button id="Github-version" class="coming-soon panel-button">Github</button>
+        </div>
+
+        <span id="panel-space"></span>
+
+        <div id="panel4" class="panel">
+            <img class="panel-image" src="https://i.pinimg.com/originals/2c/66/9f/2c669f941719df950edaf76da96cfce1.png" alt="preview of project">
+            <div id="panel-points3" class="panel-points coming-soon">
+            <ol id="panel-text">
+                <h3 id="panel-points">N/A</h3>
+                <h3 id="panel-points"></h3>
+                <h3 id="panel-points"></h3>
+            </ol>
+        </div>
+
         <div class="panel-press">
             <button id="live-version" class="coming-soon panel-button">Live Version</button>
             <button id="Github-version" class="coming-soon panel-button">Github</button>
@@ -123,7 +137,7 @@
         
 
         <input type="button" class="scroll-button" value="Scroll up" 
-        href="#Projects">My Projects</button>
+        href="#Projects" onclick="document.getElementById('body').scrollIntoView();">My Projects</button>
 
         <div id="footer">
           <h2>Created and designed by : Malik Mertus</h2>  

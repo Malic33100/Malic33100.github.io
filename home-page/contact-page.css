@@ -74,9 +74,10 @@ p{
 .submit {
     display: flex;
     border-radius: 10px;
-    border: 3px solid #a9a9a9;
+    border: 3px solid #fff;
     text-decoration: none;
-    color:#000;
+    background-color: #000;
+    color:#a9a9a9;
     width:75%;
     height:5em;
     justify-content: center;
@@ -86,7 +87,11 @@ p{
 }
 
 .submit:hover {
-animation: pulsate .8s ease-in-out;
+    animation: pulsate .4s ease-in-out;
+    color:#fff;
+    background-color:#000;
+    border: 3px solid #fff;
+    resize:125%;
 }
 
 @keyframes pulsate {
@@ -95,8 +100,8 @@ animation: pulsate .8s ease-in-out;
       /*  0 0 50px silver,
         0 0 50px silver;
         */
-        0 0 25px gold,
-        0 0 25px silver;
+        0 0 25px #000,
+        0 0 25px #000;
     }
 }
 
