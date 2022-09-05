@@ -258,6 +258,17 @@ img:hover {
     background-color: #fff;
     height:20%;
     justify-content: center;
+    border-radius: 2.5%;
+    transition: 0.3s ease-in-out;
+    border:#fff solid .3em;
+}
+
+.panel:hover {
+    width:85%;
+    height:25%;
+    background-color: #000;
+    border: #fff solid .3em;
+    transition: 0.3s ease-in-out;
 }
 
 .panel-text {
@@ -276,7 +287,7 @@ text-align: center;
 }
 
 .panel-image {
-    width: auto;
+    width: 33%;
     height: auto;
     opacity: 100%;
     transition: 0.5s;
@@ -293,6 +304,7 @@ text-align: center;
     display: flex;
     flex-direction: column;
     width: auto;
+    border: blue solid 3px;
     align-self: center;
     justify-content: center;
     height: 25%;
