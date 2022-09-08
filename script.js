@@ -4,7 +4,6 @@ var myResume = document.getElementById('resume');
 var myGithub = document.getElementById('github');
 var myLinkedin = document.getElementById('linkedin');
 var myContact = document.getElementById('contact');   
-var Panelist = document.getElementsByClassName('panel');
 
 
 //AboutText.textContent = "Hover over an icon to learn more!";
@@ -18,9 +17,13 @@ myResume.addEventListener('mouseover',resume);
 myGithub.addEventListener('mouseover',github);
 myLinkedin.addEventListener('mouseover',linkedin);
 myContact.addEventListener('mouseover',contactPage);
-
+setTimeout(3000,Welcome());
 // functions that change about text according to image hovered over
 // event listeners for mouse moving off img are also added
+
+function Welcome(){
+    AboutText.textContent = "Hover over an icon to learn more!"
+}
 
 function resume() {
 AboutText.textContent = "Take a look at my resume";
@@ -54,3 +57,4 @@ function ResetText() {
     AboutText.style.transition = "ease-in";
     AboutText.style.transitionDuration = 2;
 }
+

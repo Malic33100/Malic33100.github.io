@@ -5,8 +5,17 @@ var firstName = form.elements["first"].value;
 var lastName = form.elements["second"].value;
 var email = form.elements["email"].value;
 var telly = form.elements["telly"].value;
-var file = form.elements["file"].value;
+var subject = form.elements["subject"].value;
 var message = form.elements["message-box"].value;
+const submit = getElementById("Submit");
+// const returnHome = getElementById("Return");
+
+
+
+function Submit() {
+    // enter form data //
+    // submit form // 
+}
 
 
 const nodemailer = require('nodemailer');
