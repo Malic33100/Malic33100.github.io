@@ -140,6 +140,9 @@ img:hover {
     background-color: yellow;
 }
 
+#contact {
+    display:none;
+}
 
 #contact-page-icon {
     height:fit-content;
