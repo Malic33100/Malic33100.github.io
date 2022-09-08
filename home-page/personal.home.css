@@ -228,10 +228,6 @@ img:hover {
     transition:  0.3s ease-in-out;
 }
 
-a {
-    height:auto;
-}
-
 .panel-wrap {
     position:relative;
     width: 80%;
