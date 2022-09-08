@@ -1,22 +1,20 @@
 {
-  "name": "personal-site",
+  "name": "home-page",
   "version": "1.0.0",
-  "description": "Personal site to showcase projects and contact me",
-  "main": "index.js",
+  "description": "personal web site",
+  "main": "script.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npm run",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Malic33100/Personal-site.git"
+    "url": "git+https://github.com/Malic33100/Personal-site.git#master"
   },
   "author": "Malik Mertus",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Malic33100/Personal-site/issues"
   },
-  "homepage": "https://github.com/Malic33100/Personal-site#readme",
-  "dependencies": {
-    "nodemailer": "^6.7.3"
-  }
+  "homepage": "https://github.com/Malic33100/Personal-site/blob/master/home-page/index.html"
 }
