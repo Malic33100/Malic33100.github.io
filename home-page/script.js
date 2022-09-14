@@ -45,7 +45,7 @@ myLinkedin.addEventListener('mouseout',ResetText);
 }
 
 function contactPage() {
-    AboutText.textContent = "Contact page";
+    AboutText.textContent = "Contact me";
     AboutText.style.opacity = 1;
 myContact.addEventListener('mouseout',ResetText); 
 }
