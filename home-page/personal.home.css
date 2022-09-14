@@ -288,6 +288,7 @@ img:hover {
     }
 
     .panel-points {
+        display:none;
         visibility:none;
     }
 
@@ -347,6 +348,7 @@ margin:none;
 }
 
 .panel-button {
+    display: flex;
     width: 80%;
     align-self: center;
     height: 25%;
@@ -359,6 +361,7 @@ margin:none;
     justify-content: center;
     text-align: center;
     padding: .5em 3em;
+    transition: .15s linear;
 }
 
 .panel-button:hover {
@@ -366,6 +369,7 @@ margin:none;
     border: 3px solid #ffff00;
     color:#fff;
     resize:125%;
+    transition: .15s;
 }
 
 #panel-space {
