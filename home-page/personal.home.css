@@ -50,20 +50,20 @@ body {
     filter:invert(100%);    
 }
 
-/*img styles */
-img {
+/*icon styles */
+.icon {
     width: 4.4em;
     height: auto;
     opacity: 80%;
-    border-color:#000;
     margin-left: 2em;
+    border-color:#000;
     transition: 0.5s;
    /* border-color:linear-gradient(256deg, #ff2400, #e81d1d, #e8b71d,
      #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3); */
 }
 
 /* hover animation */
-img:hover {
+icon:hover {
     max-width: 10vh;
     height: fit-content; 
     transition: 0.5s;
@@ -154,7 +154,7 @@ img:hover {
     background-color: #000;
     color:#fff;
     text-decoration: none;
-    margin-top:4%;
+    margin-top:5%;
     width:15%;
     height:5em;
     scroll-behavior: smooth;
@@ -207,7 +207,7 @@ img:hover {
     justify-content: center;
     text-align: left; 
     color:#fff;
-    margin-top:2.5em;
+    margin-top:2.6em;
     font-size: 5em;
     background-color: #000;
     text-decoration: underline 10%;
@@ -216,14 +216,49 @@ img:hover {
 
 /* panel style elements */
 
+@media screen and (max-width: 845px) {
+
+    .panel {
+        width:102%;
+        background: #000;
+    }
+
+    .panel-button {
+        background-color: #000;
+    }
+    .panel-points {
+        display:none;
+    }
+
+    .panel:hover {
+        disabled;
+    }
+
+    h3 {
+        display:none;
+    }
+
+    .panel-buttons-box {
+        width:50%;
+        margin-left: 1rem;
+    }
+    .panel-image {
+        width:50%;
+    }
+
+    .about-me {
+        display:none;
+      }
+  }
+
 .panel {
     display: flex;
     flex-direction: row; 
     width: 99%;
-    margin-left: .75%;
+    margin-left: .25rem;
     margin-top:.5%;
     background-color: #fff;
-    height:97%;
+    height:10rem;
     justify-self: center;
     align-self: center;
     transition:  0.3s ease-in-out;
@@ -235,7 +270,9 @@ a {
 
 .panel-wrap {
     position:relative;
-    width: 80%;
+    display:flex;
+    align-self: flex-end;
+    width: 95%;
     height:20%;
     transition: 0.3s ease-in-out;   
     background: linear-gradient(45deg, #fb0094, #0000ff, #00ff00,#ffff00, #ff0000, #fb0094, 
@@ -248,8 +285,10 @@ a {
     background: linear-gradient(45deg, #fb0094, #0000ff, #00ff00,#ffff00, #ff0000, #fb0094, 
       #0000ff, #00ff00,#ffff00, #ff0000);
     background-size: 400%;
-    width: calc(100% + .3rem);
-    height: calc(100% + .3rem);
+    /* width: calc(100% + .3rem);
+    height: calc(100% + .3rem); */
+    height: 100%;
+    width:100%;
     z-index: -1;
     animation: steam 20s linear infinite; 
 }
@@ -270,50 +309,32 @@ a {
     filter: blur(2.5rem);
   }
 
+  #live-version {
+    display: none;
+  }
+
 .panel:hover {
-    width:102%;
-    height:102.5%;
+    width:105%;
+    height:105%;
     margin-left:0;
     margin-top:0;
     background: linear-gradient(0deg, #000, #272727);
     transition: 0.3s ease-in-out;
 }
 
-.panel:hover .panel-text {
+.panel:hover .panel-points {
     color:#ffff00;
 }
 
-@media screen and (max-width: 845px) {
-
-    .panel-points {
-        visibility:none;
-    }
-
-    .panel-buttons-box {
-        width:50%;
-    }
-    .panel-image {
-        width:50%;
-        margin:none;
-        height:auto;
-    }
-
-    .about-me {
-        display:none;
-      }
-  }
-
 .panel-points {
-    width:40%;
-    height:auto;
-    display:flex;
+width:40%;
+height:auto;
 flex-direction: column;
 justify-content:space-evenly;
  margin-left:1%;
  margin-right:1%;
-    overflow-x:auto;
+overflow-x:auto;
 color:#000;
-overflow-y: scroll;
 font-size: .8rem;
 text-align:justify;
 }
@@ -335,9 +356,10 @@ text-align:justify;
 
 .panel-image {
     display:flex;
-    width: 30%;
+    width: 60%;
     height: auto;
     opacity: 100%;
+    margin:none;
     transition: 0.5s;
     pointer-events: none;
 }
@@ -351,7 +373,7 @@ margin:none;
 }
 
 .panel-button {
-    width: 80%;
+    width: 95%;
     align-self: center;
     height: 25%;
    color:#000;
@@ -362,7 +384,8 @@ margin:none;
     scroll-behavior: smooth;
     justify-content: center;
     text-align: center;
-    padding: .5em 3em;
+    align-content: center;
+    transition:.05s linear;
 }
 
 .panel-button:hover {
@@ -373,8 +396,8 @@ margin:none;
 }
 
 #panel-space {
-    margin-top: 1vw;
-    margin-bottom: 1vw;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 #scroll-to-top {
