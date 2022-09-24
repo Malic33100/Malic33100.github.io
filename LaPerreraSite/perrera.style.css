@@ -17,10 +17,11 @@ body {
 }
 
 #welcome {
-    display: block;
+    display: flex;
     font-family: 'Merienda';
     align-self: center;
     text-align: center;
+    margin:none;
 }
 
 #top {
@@ -93,8 +94,9 @@ justify-content: space-between;
 .btn {
     background-color: olivedrab;
     color:#fff;
+    justify-self: center;
     border: none;
-    width: 49.5%;
+    width: 47.5%;
     cursor: pointer;
     padding: 0.5rem;
 }
@@ -130,18 +132,23 @@ justify-content: space-between;
 }
 
 #All-links{
-    justify-content: center;
-    margin-left: 43%;
+    justify-content: space-between;
+    background-image: url("myimage.gif");
+    background-color: #EE4B2B;
+    opacity: 50%;
+    display: flex;
 }
 
 .top-button:hover {
     color:rosybrown;
 }
 
-.link-box {
-    height: 4vh;
-    width: 4vw;
-    display:inline-block;
+.link-icon {
+    height: 3rem;
+    width: 8rem;
+    flex-direction: row;
+    display:flex;
+    justify-self: center;
 }
 
  .links {
