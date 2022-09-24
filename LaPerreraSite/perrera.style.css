@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merienda&display=swap');
+
+* {
+    box-sizing: border-box ;
+}
+
+body {
+    font-family: "Montserrat" , sans-serif;
+    display: block;
+    align-items:center;
+    justify-content: center;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    height: 100vh;
+    margin:0;
+}
+
+#welcome {
+    display: block;
+    font-family: 'Merienda';
+    align-self: center;
+    text-align: center;
+}
+
+#top {
+    display:flex;
+    width: auto;
+    align-items: center;
+    justify-content: space-around;
+    margin: auto;
+}
+
+#NoShow {
+display: none;
+}
+
+#Home-button {
+background-color: green;
+}
+
+#Contact-button {
+    background-color: #fff;
+}
+
+#Locations-button {
+    background-color: red;
+}
+
+#buttons-container {
+    width:100vw;
+}
+
+.top-button {
+    margin: none;
+    width: 33.5%;
+    font-family: 'Merienda';
+    height:7vh;
+    border: 0px 0px 12em 0px;
+    border-color: #000;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    align-self: center;
+}
+
+.carousel {
+box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+height: 280px;
+width:100%;
+overflow: hidden;
+align-self: center;
+}
+
+ .img {
+     width: 500px;
+     height: 250px;
+     object-fit: cover;
+ }
+
+.image-container {
+display: flex;
+transform: translateX(0);
+transition: transform 0.5s ease-in-out;
+}
+
+.buttons-container {
+display: flex;
+justify-content: space-between;
+}
+
+.btn {
+    background-color: olivedrab;
+    color:#fff;
+    border: none;
+    width: 49.5%;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.btn:hover {
+    opacity: .9;
+}
+
+.btn:focus {
+    outline: none;
+}
+
+#Menu-title {
+    font-family: 'Merienda';
+    text-align: center;
+    height: 10%;
+    width: 100%;
+    justify-self: center;
+}
+
+#Menu {
+    width:100%;
+    display: flex;
+    height: 100%;
+    flex-direction: row;
+}
+
+#menu-header {
+    width:75%;
+    display:flex;
+    justify-content: center;
+    background-color: #fff;
+}
+
+#All-links{
+    justify-content: center;
+    margin-left: 43%;
+}
+
+.top-button:hover {
+    color:rosybrown;
+}
+
+.link-box {
+    height: 4vh;
+    width: 4vw;
+    display:inline-block;
+}
+
+ .links {
+    height: auto;
+    width: auto;
+    margin:none;
+    border: none;
+    display:flex;
+
+}
+
+#community-tab {
+    background-color: red;
+    display: block;
+    justify-content:center;
+    width:25%;
+    text-overflow: clip;
+    overflow:scroll;
+}
+
+.Community {
+     color:black;
+     background-color:#EE4B2B;
+    border-color:silver;
+    display: flex;
+    text-overflow:clip;
+    justify-content: center;
+    margin-bottom:5%;
+    margin-left: none;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1), 0 3px 6px rgba(0,0,0,0.1);
+}
+
+h1 {
+    margin: 50px 0px 30px;
+    text-align:center;
+}
+
+.faq-container {
+   max-width:auto;
+    margin:auto;
+}
+
+.faq {
+    background-color: transparent;
+    border: 1px solid #9fa4a8;
+    border-radius: 10px;
+    margin: 20px 0;
+    padding: 30px;
+    position:relative;
+    overflow:hidden;
+    transition: 0.3s ease;
+}
+
+.faq.active {
+background-color: #fff;
+box-shadow: 0 3px 6px rgba(0,0,0,0.1), 0 3px 6px rgba(0,0,0,0.1);
+}
+
+.faq.active::before,
+.faq.active::after {
+    content: '\f075';
+    font-family: 'Font Awesome 5 Free';
+    color:#2ec771;
+    font-size:7rem;
+    position:absolute;
+    opacity: 0.2;
+    top: 20px;
+    z-index:0;
+    }
+
+    .faq.active::before {
+        color: #3498db;
+        top: -10px;
+        left:-30px;
+        transform: rotate(180deg);
+    }
+
+    .faq-title {
+        margin: 0 35px 0 0;
+    }
+
+    .faq-text {
+        display:none;
+        margin: 30px 0 0;
+    }
+
+    .faq.active .faq-text {
+        display:block;
+    }
+
+    .faq-toggle {
+        background-color: transparent;
+        border: 0;
+        border-radius:50%;
+        cursor: pointer;
+        display:block;
+        align-content:center;
+        justify-content: center;
+        font-size:16px;
+        padding: 0;
+        position:absolute;
+        top:30px;
+        right:30px;
+        height:30px;
+        width:30px;
+    }
+
+    .faq-toggle:focus {
+        outline:none;
+    }
+
+    .fa-times{
+        display:none;
+    }
+
+    .faq.active .faq-toggle .fa-times {
+        display:block;
+        align-content:center;
+        justify-self:center;
+    }
+
+    .faq.active .faq-toggle .fa-chevron-down {
+        display:none;
+        color:#fff;
+    }
+
+    .faq.active .faq-toggle {
+        background-color:#9fa4a8;
+    }
+
+ iframe {
+    height:90%;
+    width: 90%;
+    margin:0;
+    align-self: center;
+    overflow-y:auto;
+    overflow-x: hidden;
+}
