@@ -1,12 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Merienda&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merienda&display=swap'); 
 
 * {
     box-sizing: border-box ;
 }
 
 body {
-    font-family: "Montserrat" , sans-serif;
+    font-family: "Merienda" , sans-serif;
     display: block;
     align-items:center;
     justify-content: center;
@@ -16,11 +15,50 @@ body {
     margin:0;
 }
 
-#welcome {
+.welcome {
     display: flex;
     font-family: 'Merienda';
+    font-style: italic;
+    font-size: 3.5vw;
+    font-weight: 100;
     align-self: center;
+    color: #000;
+    justify-content: center;
     text-align: center;
+    margin:none;
+    box-shadow: 3px 3px 9px rgba(0,0,0,0.1);
+    height:auto;
+    width: 100%;
+}
+
+.animate-character
+{
+   text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    #231557 0%,
+    #44107a 29%,
+    #ff1361 67%,
+    #fff800 100%
+  );
+  background-size: 200% auto;
+  color: #fff;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 6s linear infinite;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+
+.welcomeTitle {
+    display:flex;
+    padding-top:1%;
+    background-color:darkcyan;
     margin:none;
 }
 
@@ -49,6 +87,10 @@ background-color: green;
 }
 
 #buttons-container {
+    display: flex;
+    justify-content: space-around;
+    background-image: url(wall.jpg);
+
     width:100vw;
 }
 
@@ -57,6 +99,7 @@ background-color: green;
     width: 33.5%;
     font-family: 'Merienda';
     height:7vh;
+    font-size:inherit;
     border: 0px 0px 12em 0px;
     border-color: #000;
     align-items: center;
@@ -67,11 +110,12 @@ background-color: green;
 }
 
 .carousel {
-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-height: 280px;
-width:100%;
-overflow: hidden;
-align-self: center;
+    box-shadow: 2px 2px 5px rgb(0 0 0 / 30%);
+    height: 280px;
+    width: 100%;
+    overflow: hidden;
+    padding-bottom: 13%;
+    align-self: center;
 }
 
  .img {
@@ -83,22 +127,20 @@ align-self: center;
 .image-container {
 display: flex;
 transform: translateX(0);
+scroll-snap-type: x;
 transition: transform 0.5s ease-in-out;
 }
 
-.buttons-container {
-display: flex;
-justify-content: space-between;
-}
-
 .btn {
-    background-color: olivedrab;
-    color:#fff;
+    background-color: darkcyan;
+    color:blanchedalmond;
     justify-self: center;
     border: none;
+    border-radius: 4px;
     width: 47.5%;
     cursor: pointer;
     padding: 0.5rem;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1), 0 3px 6px rgba(0,0,0,0.1);
 }
 
 .btn:hover {
@@ -127,15 +169,49 @@ justify-content: space-between;
 #menu-header {
     width:75%;
     display:flex;
+    flex-direction: column;
     justify-content: center;
-    background-color: #fff;
+    background-image: url(stone.jpg);
 }
 
-#All-links{
-    justify-content: space-between;
-    background-image: url("myimage.gif");
-    background-color: #EE4B2B;
-    opacity: 50%;
+.link-background {
+    position: relative;
+    display: flex;
+    z-index: -1;
+    font-style: italic;
+    font-size: 1rem;
+    padding-top:.5%;
+    padding-bottom:1.5%;
+    height: 2rem;
+    margin: 0;
+    background-color: blanchedalmond;
+    justify-content: center;
+    text-align: center;
+    opacity: .7;
+    color: #000;
+    width: 100%;
+}
+
+.blinking{
+    animation:blinkingText 12s infinite;
+}
+
+@keyframes blinkingText{
+    0%{     color: #000;    }
+    49%{    color: silver; }
+    60%{    color: #000; }
+    99%{    color: silver;  }
+    100%{   color: #000;    }
+}
+
+.Link-box {
+    justify-content: space-evenly;
+    background-image: url(wall.jpg);
+    position:relative;
+    height:3.5rem;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    opacity: .7;
     display: flex;
 }
 
@@ -145,9 +221,10 @@ justify-content: space-between;
 
 .link-icon {
     height: 3rem;
-    width: 8rem;
+    width: 3rem;
     flex-direction: row;
     display:flex;
+    padding-bottom:1%;
     justify-self: center;
 }
 
@@ -161,25 +238,51 @@ justify-content: space-between;
 }
 
 #community-tab {
-    background-color: red;
-    display: block;
+    background-image: url(stone.jpg);
+    display: flex;
+    filter:brightness(.9);
+    flex-direction: column;
     justify-content:center;
     width:25%;
     text-overflow: clip;
-    overflow:scroll;
+    overflow:auto;
 }
 
 .Community {
-     color:black;
-     background-color:#EE4B2B;
+    animation: flicker 1.5s infinite alternate;
+    color: #fff;
     border-color:silver;
-    display: flex;
+    height: 3.5rem;
+    display:flex;
+    border-radius: 2%;
+    margin:0;
+    font-size:2.5rem;
+    vertical-align: middle;
     text-overflow:clip;
     justify-content: center;
-    margin-bottom:5%;
-    margin-left: none;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.1), 0 3px 6px rgba(0,0,0,0.1);
+    padding-bottom:3%;
 }
+
+@keyframes flicker {
+    
+    0%, 18%, 22%, 25%, 63%, 67%, 100% {
+  
+        text-shadow:
+        0 0 4px #fff,
+        0 0 11px #fff,
+        0 0 19px #fff,
+        0 0 40px #0fa,
+        0 0 80px #0fa,
+        0 0 90px #0fa,
+        0 0 100px #0fa,
+        0 0 150px #0fa;
+    
+    }
+    
+    20%, 24%, 65% {        
+        text-shadow: none;
+    }    
+  }
 
 h1 {
     margin: 50px 0px 30px;
@@ -187,20 +290,32 @@ h1 {
 }
 
 .faq-container {
-   max-width:auto;
-    margin:auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-image: url(wall.jpg);
+    background-size: cover;
+    background-position: center;
+    max-width: 25vw;
+    padding:1%;
+    justify-content: space-around;
 }
 
 .faq {
-    background-color: transparent;
+    background-image:url(stone.jpg);
     border: 1px solid #9fa4a8;
     border-radius: 10px;
-    margin: 20px 0;
-    padding: 30px;
+    padding: 2rem;
+    width:23vw;
+    align-self: center;
+    filter: sepia(.5) drop-shadow(2px 4px 6px black);
     position:relative;
     overflow:hidden;
     transition: 0.3s ease;
+    margin: 20px 0;
 }
+
+
 
 .faq.active {
 background-color: #fff;
@@ -220,19 +335,27 @@ box-shadow: 0 3px 6px rgba(0,0,0,0.1), 0 3px 6px rgba(0,0,0,0.1);
     }
 
     .faq.active::before {
-        color: #3498db;
+        color: #fff;
         top: -10px;
         left:-30px;
         transform: rotate(180deg);
     }
 
+    .fa-chevron-down {
+        color:#fff;
+    }
+
     .faq-title {
-        margin: 0 35px 0 0;
+        margin: 0 2rem 0 0;
+        text-align: center;
     }
 
     .faq-text {
         display:none;
         margin: 30px 0 0;
+        color:#000;
+        text-align: center;
+        font-family: 'Merienda';
     }
 
     .faq.active .faq-text {
@@ -260,7 +383,7 @@ box-shadow: 0 3px 6px rgba(0,0,0,0.1), 0 3px 6px rgba(0,0,0,0.1);
         outline:none;
     }
 
-    .fa-times{
+    .faq-toggle .fa-times{
         display:none;
     }
 
@@ -279,10 +402,11 @@ box-shadow: 0 3px 6px rgba(0,0,0,0.1), 0 3px 6px rgba(0,0,0,0.1);
         background-color:#9fa4a8;
     }
 
- iframe {
+ embed {
     height:90%;
     width: 90%;
     margin:0;
+    display: flex;
     align-self: center;
     overflow-y:auto;
     overflow-x: hidden;

@@ -249,6 +249,10 @@ icon:hover {
     .about-me {
         display:none;
       }
+
+      .panel-wrap{
+        display: hidden;
+      }
   }
 
 .panel {
