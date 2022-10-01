@@ -1,11 +1,12 @@
 //assigning js variables to html elements
-var AboutText = document.getElementById('about-text');
 var myResume = document.getElementById('resume');
 var myGithub = document.getElementById('github');
 var myLinkedin = document.getElementById('linkedin');
 var myContact = document.getElementById('contact');   
+var AboutText = document.getElementById('about-text');
 
 
+AboutText.textContent = "Software engineer / Web developer";
 //AboutText.textContent = "Hover over an icon to learn more!";
 
 /* for(var i=0;i < pictures.length;i++){
@@ -17,19 +18,13 @@ myResume.addEventListener('mouseover',resume);
 myGithub.addEventListener('mouseover',github);
 myLinkedin.addEventListener('mouseover',linkedin);
 myContact.addEventListener('mouseover',contactPage);
-setTimeout(3000,Welcome());
 // functions that change about text according to image hovered over
 // event listeners for mouse moving off img are also added
-
-function Welcome(){
-    AboutText.textContent = "Hover over an icon to learn more!"
-}
 
 function resume() {
 AboutText.textContent = "Take a look at my resume";
 AboutText.style.opacity = 1;
 myResume.addEventListener('mouseout',ResetText);
-
 };
 
 function github() {
@@ -52,9 +47,10 @@ myContact.addEventListener('mouseout',ResetText);
 
 // function to reset the about box text after hover
 function ResetText() {
-    AboutText.textContent = "Hover over an icon to learn more!"
+    AboutText.textContent = "Software engineer / Web developer"
     AboutText.style.opacity = 1;
     AboutText.style.transition = "ease-in";
     AboutText.style.transitionDuration = 2;
 }
+
 

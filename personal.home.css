@@ -102,25 +102,14 @@ icon:hover {
 
 /* about text that describes page, and element currently hovered */
 #about-text {
-    font-size: medium;
+    display: block;
+    font-size: 1rem;
     color:#fff;
-    text-align: center;
-    opacity: 0;
-    width: 100%;
-    margin-top:10px;
+    text-align:center;
+    width: 40vw;
+    padding-top:1rem;
     background-color: #000;
-    transition-duration: 2s;
-    transition: linear;
-    animation: 2s ease-out 0s 1 Fadein;
-}
-
-#description {
-    width:30%;
-    height: auto;
-    margin-left:1em;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+    animation: 2s ease-out Fadein;
 }
 
 /* icon styles */
@@ -156,7 +145,7 @@ icon:hover {
     text-decoration: none;
     margin-top:5%;
     width:15%;
-    height:5em;
+    height:5rem;
     scroll-behavior: smooth;
     justify-content: center;
     justify-self:center;
@@ -186,6 +175,7 @@ icon:hover {
 #panel-bar {
     display: flex;
 }
+
 #return {
     margin-bottom:10%;
     display: flex;
@@ -246,10 +236,9 @@ icon:hover {
         width:70%;
     }
 
-    .about-me {
-        display:none;
-      }
   }
+
+
 
 .panel {
     display: flex;
@@ -279,32 +268,6 @@ a {
     background: linear-gradient(45deg, #fb0094, #0000ff, #00ff00,#ffff00, #ff0000, #fb0094, 
     #0000ff, #00ff00,#ffff00, #ff0000);
 }
-
-.panel-wrap:before , .panel:after {
-    content: '';
-    position: absolute;
-    background: linear-gradient(45deg, #fb0094, #0000ff, #00ff00,#ffff00, #ff0000, #fb0094, 
-      #0000ff, #00ff00,#ffff00, #ff0000);
-    background-size: 400%;
-    /* width: calc(100% + .3rem);
-    height: calc(100% + .3rem); */
-    height: 100%;
-    width:100%;
-    z-index: -1;
-    animation: steam 20s linear infinite; 
-}
-
-@keyframes steam {
-    0% {
-      background-position: 0 0;
-    }
-    50% {
-      background-position: 400% 0;
-    }
-    100% {
-      background-position: 0 0;
-    }
-  }
   
   .panel:after {
     filter: blur(2.5rem);
@@ -337,31 +300,17 @@ text-align:center;
 .panel-points {
 width:40%;
 height:auto;
+display: flex;
 flex-direction: column;
-justify-content:space-evenly;
- margin-left:1%;
- margin-right:1%;
- margin-bottom:1%;
+justify-content:space-around;
+padding: 1%;
 overflow-x:auto;
+overflow-y: clip;
 color:#000;
 font-size: .8rem;
 text-align:justify;
 }
 
-/*
-.panel-text {
-display: inline-flex;
-width:auto;
-height:auto;
-/* margin-top:1%;
-margin-bottom:1%;   
-overflow-x:hidden;
-color:#000;
-overflow-y: clip;
-font-size: 1rem;
-text-align:justify;
-}
-*/
 
 .panel-image::before, .panel-image::after {
     display:flex;
@@ -376,7 +325,8 @@ text-align:justify;
 .panel-buttons-box {
 display: flex;
 flex-direction: column; 
-justify-content: space-around;
+justify-content: space-evenly;
+padding: right 2.5%;
 width:30%;   
 margin:none;
 }
