@@ -7,7 +7,7 @@ const rightBtn = document.getElementById("right");
 const img = document.querySelectorAll('#imgs img');
 
 /* toggle faq buttons*/
-const toggles = document.querySelectorAll('.com-toggle');
+const toggles = document.querySelectorAll('.faq-toggle');
 
 let idx = 0;
 let interval = setInterval(run, 4000);
